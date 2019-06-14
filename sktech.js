@@ -1,26 +1,33 @@
 var pvarray = [];
-
+var root;
 function setup(){
     createCanvas(1000, 1000);
     
-    var t = 4;
+	root = new Branch(createVector(0, 0) ,createVector(0, 5));
+
+	pvarray[0] = root;
+
+    var t = 6;
     var r = 2;
     for(var i = 0; i < 800; i++){
-   	var x, y;
-   	x = (Math.exp(t)*Math.cos(t));
-   	y = (Math.exp(t)*Math.sin(t));
-   	pvarray.push(createVector(x,y));
-   	t = t * 1.001;
-   	if(t >= 360){
-   		t = 2;
-   	}	
-   	print("R -> " + r);
-   	print(pvarray[i].x);
-	}
+   		
+   	}
 
-  
 
 }
+
+function mousePressed(){
+		for(var c = 0; c < 20; c++){
+
+
+			for(var i = pvarray.length-1; i >= 0 ; i--){
+				pvarray.push(pvarray[i].branch());
+				pvarray.push(pvarray[i].branch());
+				console.log(pvarray[i]);	
+			}
+		}
+}
+
 
 function draw(){
 	background(51);
@@ -32,8 +39,7 @@ function draw(){
 	noFill();
 	beginShape();
 	for(var i = 0; i < pvarray.length; i++){
-		//point(pvarray[i].x, pvarray[i].y, 5, 5);
-		vertex(pvarray[i].x, pvarray[i].y);
+		pvarray[i].show();
 	}
 	
 	endShape();

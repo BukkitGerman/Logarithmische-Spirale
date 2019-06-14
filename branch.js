@@ -12,8 +12,8 @@ class Branch{
 
 	branch = function(rl){
 		var dir = p5.Vector.sub(this.end, this.begin);
-		dir.mult(0.67);
-		dir.rotate(PI / 4);					//TODO: Add a random angle
+		dir.rotate(PI / 4);
+		dir.mult(1.09);					//TODO: Add a random angle
 		var newEndPoint = p5.Vector.add(this.end, dir);
 		var branch = new Branch(this.end, newEndPoint);
 		return branch;
