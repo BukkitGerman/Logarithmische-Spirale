@@ -1,7 +1,7 @@
 var pvarray = [];
 var root;
 function setup(){
-    createCanvas(1000, 1000);
+    createCanvas(600, 600);
     
 	root = new Branch(createVector(0, 0) ,createVector(0, 5));
 
@@ -18,7 +18,7 @@ function setup(){
 
 function mousePressed(){
 
-			for(var i = pvarray.length-1; i < 300; i++){
+			for(var i = pvarray.length-1; i < 5000; i++){
 				pvarray.push(pvarray[i].branch());
 				console.log(pvarray.length);
 				}	
@@ -28,11 +28,11 @@ function mousePressed(){
 function draw(){
 	background(51);
 
-	translate(width/2, height/2);
+	translate(width/2+(width/20), height/2);
 
 	stroke(255);
 		noFill();
-	beginShape(TRIANGLES);
+	beginShape();
 	for(var i = 0; i < pvarray.length; i++){
 		//pvarray[i].show();
 		vertex(pvarray[i].begin.x, pvarray[i].begin.y)
