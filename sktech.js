@@ -32,7 +32,7 @@ function draw(){
 
 	stroke(255);
 		noFill();
-	beginShape(TRIANGLE_FAN);
+	beginShape(TRIANGLES);
 	for(var i = 0; i < pvarray.length; i++){
 		//pvarray[i].show();
 		vertex(pvarray[i].begin.x, pvarray[i].begin.y)
