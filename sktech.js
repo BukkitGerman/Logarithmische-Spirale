@@ -30,6 +30,14 @@ function draw(){
 
 	translate(width/2+(width/20), height/2);
 
+	for(var i = 0; i < pvarray.length; i++){
+		pvarray[i].begin.x += random(-1, 1);  
+		pvarray[i].begin.y += random(-1, 1); 
+
+		pvarray[i].end.x += random(-1, 1);
+		pvarray[i].end.y += random(-1, 1);
+	}
+
 	stroke(255);
 		noFill();
 	beginShape();
