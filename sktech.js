@@ -17,15 +17,11 @@ function setup(){
 }
 
 function mousePressed(){
-		for(var c = 0; c < 20; c++){
 
-
-			for(var i = pvarray.length-1; i >= 0 ; i--){
+			for(var i = pvarray.length-1; i < 300; i++){
 				pvarray.push(pvarray[i].branch());
-				pvarray.push(pvarray[i].branch());
-				console.log(pvarray[i]);	
-			}
-	}
+				console.log(pvarray.length);
+				}	
 }
 
 
@@ -36,9 +32,11 @@ function draw(){
 
 	stroke(255);
 		noFill();
-	beginShape();
+	beginShape(TRIANGLE_FAN);
 	for(var i = 0; i < pvarray.length; i++){
-		pvarray[i].show();
+		//pvarray[i].show();
+		vertex(pvarray[i].begin.x, pvarray[i].begin.y)
+		vertex(pvarray[i].end.x, pvarray[i].end.y)
 	}
 	
 	endShape();
