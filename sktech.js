@@ -25,7 +25,7 @@ function mousePressed(){
 				pvarray.push(pvarray[i].branch());
 				console.log(pvarray[i]);	
 			}
-		}
+	}
 }
 
 
@@ -35,8 +35,7 @@ function draw(){
 	translate(width/2, height/2);
 
 	stroke(255);
-
-	noFill();
+		noFill();
 	beginShape();
 	for(var i = 0; i < pvarray.length; i++){
 		pvarray[i].show();
