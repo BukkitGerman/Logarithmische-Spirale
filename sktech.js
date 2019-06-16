@@ -20,7 +20,6 @@ function mousePressed(){
 
 			for(var i = pvarray.length-1; i < 5000; i++){
 				pvarray.push(pvarray[i].branch());
-				console.log(pvarray.length);
 				}	
 }
 
