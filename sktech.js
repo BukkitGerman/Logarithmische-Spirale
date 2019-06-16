@@ -2,7 +2,7 @@ var pvarray = [];
 var root;
 function setup(){
     createCanvas(600, 600);
-    
+    frameRate(10);
 	root = new Branch(createVector(0, 0) ,createVector(0, 5));
 
 	pvarray[0] = root;
