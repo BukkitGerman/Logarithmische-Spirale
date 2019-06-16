@@ -31,11 +31,11 @@ function draw(){
 	translate(width/2+(width/20), height/2);
 
 	for(var i = 0; i < pvarray.length; i++){
-		pvarray[i].begin.x += random(-1, 1);  
-		pvarray[i].begin.y += random(-1, 1); 
+		pvarray[i].begin.x += random(-0.1, 0.1);  
+		pvarray[i].begin.y += random(-0.1, 0.1); 
 
-		pvarray[i].end.x += random(-1, 1);
-		pvarray[i].end.y += random(-1, 1);
+		pvarray[i].end.x += random(-0.2, 0.2);
+		pvarray[i].end.y += random(-0.2, 0.2);
 	}
 
 	stroke(255);
